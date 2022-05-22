@@ -1,0 +1,13 @@
+<h1>Bookmarks#show</h1>
+
+<p>
+  <strong>Name:</strong>
+  <%= @bookmark.comment %>
+</p>
+
+<%= link_to "Return to the bookmark", bookmarks_path %>
+
+<%= link_to "Delete",
+  bookmark_path(@bookmark),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>

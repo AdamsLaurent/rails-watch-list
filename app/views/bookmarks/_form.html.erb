@@ -1,12 +1,12 @@
-<%= simple_form_for(@bookmark) do |f| %>
+<%= simple_form_for [@list, @bookmark] do |f| %>
 
-
-  <div class="form-inputs">
-    <%= f.input :movie_id %>
+  <div>
+    <%= f.association :movie %>
     <%= f.input :comment %>
   </div>
 
-  <div class="form-actions">
+  <div class="btn btn-primary">
     <%= f.button :submit %>
   </div>
+
 <% end %>
